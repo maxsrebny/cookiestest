@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#F6CDD9">
+  <title>cream cookies club</title>
+  <!-- SDK Telegram и QR лежат в vendor/, чтобы не зависеть от telegram.org и Cloudflare -->
+  <script src="vendor/telegram-web-app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Шрифты грузятся асинхронно: если Google Fonts недоступен, страница не ждёт -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="styles.css">
+  <script src="vendor/qrcode.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <main id="view"></main>
+    <div id="cartbar" class="cartbar" style="display:none">
+      <div><div class="xs" style="opacity:.8" id="cart-n"></div><div class="sum" id="cart-sum"></div></div>
+      <button class="btn" data-action="checkout">Оформить</button>
+    </div>
+    <nav class="tabbar"></nav>
+  </div>
+  <div id="toast"></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
